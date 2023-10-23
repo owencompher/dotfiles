@@ -1,0 +1,23 @@
+*.font: JetBrains Mono:size=12
+xterm*FaceName: Jetbrains Mono
+xterm*FaceSize: 12
+
+*foreground: #fff8e7
+*background: #251c1c
+
+*color0: #1c1415
+*color1: #df656a
+*color2: #52df6b
+*color3: #e7bd72
+*color4: #697ee7
+*color5: #b568df
+*color6: #5edced
+*color7: #9a8d88
+*color8: #413838
+*color9: #fbb194
+*color10: #8afb8a
+*color11: #ffff8f
+*color12: #9ab3fb
+*color13: #e398fb
+*color14: #8efbf9
+*color15: #fff8e7

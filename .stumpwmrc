@@ -1,0 +1,26 @@
+(in-package :stumpwm)
+
+(setf *startup-message* "o/")
+
+; (run-shell-command "xrdb ~/.Xdefaults)
+
+;;; use command (or windows) key as prefix key (not mod)
+(run-shell-command "xmodmap -e 'clear mod4'" t)
+(run-shell-command "xmodmap -e \'keycode 133 = F20\'")
+(set-prefix-key (kbd "F20"))
+
+;;; run st instead of xterm with cmd c
+(define-key *root-map* (kbd "c") "run-shell-command 'st'")
+
+(define-key *root-map* (kbd "g") "run-shell-command 'palemoon'")
+
+(setf *mouse-focus-policy* :click)
+
+(set-font "JetBrains Mono:pixelsize=12:antialias=true")
+(set-bg-color "#1c1415")
+(set-win-bg-color "#251c1c")
+(set-focus-color "#413838")
+(set-unfocus-color "#1c1415")
+(setf *window-border-style* :thin)
+(setf *normal-border-width* 2)
+

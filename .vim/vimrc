@@ -1,0 +1,19 @@
+set expandtab
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set showmatch
+set showcmd
+set number
+set cursorline
+set colorcolumn=80
+
+filetype plugin on
+filetype indent on
+
+color mycolor
+syntax on
+
+hi def link myFun Function
+match myFun /\v[[:alpha:]_]+\ze\(/
+
