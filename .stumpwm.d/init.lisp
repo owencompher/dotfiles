@@ -26,15 +26,15 @@
        "^5*%d "
     )
     wifi:*wifi-modeline-fmt* "^2*online^n"
-    *window-format* "%n: %t "
+    *window-format* "%n: %25t"
     *time-modeline-string* "%a %b %e %H:%M:%S"
     *mode-line-timeout* 1
 
     *mode-line-highlight-template* "~A"
-    *hidden-window-color* "^9*"
+    *hidden-window-color* "^8*"
     *mode-line-background-color* latte0
-    *mode-line-foreground-color* latte15
-    *mode-line-border-color* latte8
+    *mode-line-foreground-color* latte5
+    *mode-line-border-color* latte4
     *mode-line-border-width* 0
     *mode-line-pad-y* 4
 )
@@ -42,16 +42,16 @@
 
 ;;; message window
 (set-bg-color latte0)
-(set-fg-color latte15)
-(set-border-color latte8)
+(set-fg-color latte5)
+(set-border-color latte4)
 (set-msg-border-width 0)
 (setf *message-window-y-padding* 2
       *message-window-gravity* :top
       *input-window-gravity* :top )
 
 ;;; windows
-(set-win-bg-color latteBG)
-(set-focus-color latte8)
+(set-win-bg-color latte1)
+(set-focus-color latte4)
 (set-unfocus-color latte0)
 (setf *mouse-focus-policy* :click
       *window-border-style* :thin
