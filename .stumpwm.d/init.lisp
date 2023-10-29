@@ -3,6 +3,7 @@
 (load-module "ttf-fonts")
 (load-module "battery-portable")
 (load-module "wifi")
+(load-module "app-menu")
 (load "~/.stumpwm.d/colors.lisp")
 
 (setf *startup-message* "o/")
@@ -62,8 +63,20 @@
 (run-shell-command "xmodmap -e \'keycode 133 = F20\'") 
 (set-prefix-key (kbd "F20"))
 
+(setq app-menu:*app-menu*
+      `(("Browser"
+         ("Palemoon" "palemoon")
+         ("Firefox" "firefox")
+         ("Surf (tabbed)" "surft")
+         )
+        ("Reader (zathura)" "zathura")
+        ("Audio (alsamixer)" "alsamixer")
+        ("Resources (gotop)" "gotop")
+        ("Terminal" "st")))
+
 ;;; keybinds
 (define-key *root-map* (kbd "c") "run-shell-command 'st'")
 (define-key *root-map* (kbd "z") "run-shell-command 'zathura'")
 (define-key *root-map* (kbd "g") "run-shell-command 'palemoon'")
+(define-key *root-map* (kbd "/") "show-menu")
 
